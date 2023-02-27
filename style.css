@@ -113,6 +113,8 @@ button{
   width:180px;
   margin: 10px;
   outline: none;
+	
+	border-radius:5px;
   
     
 }
