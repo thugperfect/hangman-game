@@ -64,14 +64,18 @@ p{
   width:35px;
   height:30px;
   padding-top:10px;
-  background:rgb(179, 109, 109);
+  background:pink;
   color:rgb(31, 48, 31);
   cursor:pointer;
-
+  border-radius: 5px;
   border: solid 1px white;
     
   
 }
+#alphabet li:hover{
+  background-color: aliceblue;
+}
+
 
 #my-word {
   margin: 0;
@@ -90,7 +94,7 @@ p{
 }
 
 .active {
-  @include opacity;
+  
   cursor:default;
 
 }
@@ -113,8 +117,6 @@ button{
   width:180px;
   margin: 10px;
   outline: none;
-	
-	border-radius:5px;
   
     
 }
@@ -129,4 +131,8 @@ button{
   #alphabet {
   padding:0 0 0 25px;
 }
+  }
+  .letter:hover{
+    border-radius: 100%;
+
   }
