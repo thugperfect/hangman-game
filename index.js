@@ -67,7 +67,7 @@ window.onload = function () {
       }
     }
     
-    // Show lives
+    
      comments = function () {
       showLives.innerHTML = "You have " + lives + " lives";
       if (lives < 1) {
@@ -80,14 +80,14 @@ window.onload = function () {
       }
     }
   
-        // Animate man
+      
     var animate = function () {
       var drawMe = lives ;
       drawArray[drawMe]();
     }
   
     
-     // Hangman
+     
     canvas =  function(){
   
       myStickman = document.getElementById("stickman");
@@ -99,6 +99,7 @@ window.onload = function () {
     
       head = function(){
         myStickman = document.getElementById("stickman");
+  
         context = myStickman.getContext('2d');
         context.beginPath();
         context.arc(60, 25, 10, 0, Math.PI*2, true);
@@ -150,8 +151,6 @@ window.onload = function () {
     
     drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1]; 
   
-  
-    // OnClick Function
      check = function () {
       list.onclick = function () {
         var geuss = (this.innerHTML);
@@ -179,7 +178,7 @@ window.onload = function () {
     play = function () {
       categories = [
        
-          ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws","babylon","troy"],
+          ["alien", "gladiator", "finding-nemo", "jaws","babylon","troy","silent hills","shining","titanic"],
       
       ];
   
@@ -207,16 +206,14 @@ window.onload = function () {
   
         hints = [
           
-          ["Science-Fiction horror film", "1971 American action film", "Historical drama", "Anamated Fish", "Giant great white shark","oscar worth film","ancient epic"],
+          ["Science-Fiction horror film", "Historical drama", "Anamated Fish", "Giant great white shark","oscar worth film","ancient epic","one of the top 10 horror films of all time","1980's horror","love film"],
           
       ];
   
       var catagoryIndex = categories.indexOf(chosenCategory);
       var hintIndex = chosenCategory.indexOf(word);
       showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
-    };
-  
-     // Reset
+    }
   
     document.getElementById('reset').onclick = function() {
       correct.parentNode.removeChild(correct);
@@ -226,6 +223,8 @@ window.onload = function () {
       play();
     }
   }
+  
+  
   
   
   
